@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Navbar from '../components/Burger';
+import { useSession, signIn, signOut } from "next-auth/client"
 
 export default function Home() {
+  const { session, loading } = useSession()
 
   return (
     <body className="bg-gray-50 text-black">
@@ -12,6 +14,22 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
       </Head>
+      {!session && (
+        <>
+          Not signed in <br/>
+          <button onClick={signIn}>Sign In</button>
+        </>
+
+      )}
+      {
+        session &&(
+          <>
+          Signd in as {session.user.email}<br />
+          <div>You can now access our super secret pages</div>
+          <button onClick={signOut}>sign out</button>
+          </>
+        )
+      }
       <div className="bg-white">
         <nav className="flex items-center justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
           <div>
