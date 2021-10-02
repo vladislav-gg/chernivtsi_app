@@ -14,22 +14,6 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
       </Head>
-      {!session && (
-        <>
-          Not signed in <br/>
-          <button onClick={signIn}>Sign In</button>
-        </>
-
-      )}
-      {
-        session &&(
-          <>
-          Signd in as {session.user.email}<br />
-          <div>You can now access our super secret pages</div>
-          <button onClick={signOut}>sign out</button>
-          </>
-        )
-      }
       <div className="bg-white">
         <nav className="flex items-center justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
           <div>
@@ -45,7 +29,21 @@ export default function Home() {
             <a href="/events" className="text-gray-900">Tickets and Events</a>
             <a href="/about" className="text-gray-900">About</a>
             <a href="/news" className="text-gray-900">News</a>
-            <a href="/signin" className="text-gray-900">Sign in</a>
+            {!session && (
+              <>
+                <br/>
+                <a href='/api/auth/signin' onClick={signIn}>Sign In</a>
+              </>
+
+            )}
+            {
+              session &&(
+                <>
+                Signed in as {session.user.email}<br />
+                <a onClick={signOut}>sign out</a>
+                </>
+              )
+            }
           </div>
           <div className="hidden flex flex-col items-start">
             <a href="/" className="text-gray-900">Tickets and Events</a>
