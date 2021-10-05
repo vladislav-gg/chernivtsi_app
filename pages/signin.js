@@ -1,7 +1,7 @@
 {!session && (
     <>
       Not signed in <br/>
-      <button onClick={signIn}>Sign In</button>
+      <a href='/' onClick={signIn}>Sign In</a>
     </>
 
   )}
@@ -9,7 +9,7 @@
     session &&(
       <>
       Signed in as {session.user.email}<br />
-      <button onClick={signOut}>sign out</button>
+      <a href='/' onClick={signOut}>sign out</a>
       </>
     )
   }
