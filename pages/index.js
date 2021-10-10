@@ -2,10 +2,18 @@ import Head from 'next/head';
 import Navbar from '../components/Burger';
 import { useSession, signIn, signOut } from "next-auth/client"
 import MyApp from './_app';
+import { useState } from 'react';
+
 
 
 export default function Home() {
   const { session, loading } = useSession()
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
+
 
   return (
     <body className="bg-gray-50 text-black">
@@ -17,15 +25,14 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
       </Head>
       <div className="bg-white">
-        <nav className="flex items-center justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
+        <nav className="flex flex-col justify-start md:items-center md:justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
           <div>
             <a href="/" id="logo" className="text-gray-900 font-semibold">Chernivtsi National Theatre </a>
           </div>
-          <div>
-            <button type='button' className="block text-gray-900 md:hidden mobile-button">
+          <div className='mt-5'>
+            <button type='button' className="mobile-burger-menu block text-gray-900 md:hidden" onClick={handleClick}>
               <svg className="fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
             </button>
-
           </div>
           <div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9">
             <a href="/events" className="text-gray-900">Tickets and Events</a>
@@ -33,21 +40,24 @@ export default function Home() {
             <a href="/news" className="text-gray-900">News</a>
             {!session && (
               <>
-                <br/>
-                <a href='/api/auth/signin' onClick={signIn}>Sign In</a>
+                <button
+                  onClick={() =>
+                    signIn("google", { callbackUrl: "http://localhost:3000/" })
+                  }
+                >
+                  Sign in
+                </button>
               </>
-
             )}
-            {
-              session &&(
-                <>
-                Signed in as {session.user.email}<br />
-                <a onClick={signOut}>sign out</a>
-                </>
-              )
-            }
+            {session && (
+              <>
+                Signed in as {session.user.name} <br />
+              </>
+            )}
           </div>
-          <div className="hidden flex flex-col items-start">
+          <div className={`${
+            active ? '' : 'hidden'
+          }  flex flex-col items-start mt-5 text-xl`}>
             <a href="/" className="text-gray-900">Tickets and Events</a>
             <a href="/" className="text-gray-900">About</a>
             <a href="/" className="text-gray-900">News</a>
@@ -78,8 +88,10 @@ export default function Home() {
             <span className="ml-10 font-serif font-bold">19:00</span>
           </div>
           <div className="flex flex-col justify-center ml-10 mt-3 md:mt-0 md:ml-0">
+          <a href='/shows/nutckracker'>
             <h2 className="text-4xl text-gray-900 font-serif font-medium">Swan Lake</h2>
             <h4 className="text-lg text-gray-500 font-sans italic">Commedia per musica in four acts by Wolfgang Amadeus Mozart</h4>
+          </a>
           </div>
           <div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
             <button type='button' className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700">Buy tickets</button>
@@ -92,8 +104,10 @@ export default function Home() {
               <span className="ml-10 font-serif font-bold">17:00</span>
             </div>
             <div className="flex flex-col justify-center ml-10 mt-3 md:mt-0 md:ml-0">
-              <h2 className="text-4xl text-gray-900 font-serif font-medium"><a href='/shows/nutckracker'>The Nutcracker</a></h2>
+            <a href='/shows/nutckracker'>
+              <h2 className="text-4xl text-gray-900 font-serif font-medium">The Nutcracker</h2>
               <h4 className="text-lg text-gray-500 font-sans italic">Commedia per musica in four acts by Wolfgang Amadeus Mozart</h4>
+            </a>
             </div>
             <div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
               <button className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700">Buy tickets</button>
@@ -106,8 +120,10 @@ export default function Home() {
             <span className="ml-10 font-serif font-bold">20:00</span>
           </div>
           <div className="flex flex-col justify-center ml-10 mt-3 md:mt-0 md:ml-0">
-            <h2 className="text-4xl text-gray-900 font-serif font-medium">Romeo and Juliet</h2>
-            <h4 className="text-lg text-gray-500 font-sans italic">Commedia per musica in four acts by Wolfgang Amadeus Mozart</h4>
+            <a href='/shows/nutckracker'>
+              <h2 className="text-4xl text-gray-900 font-serif font-medium">Romeo and Juliet</h2>
+              <h4 className="text-lg text-gray-500 font-sans italic">Commedia per musica in four acts by Wolfgang Amadeus Mozart</h4>
+            </a>
           </div>
           <div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
             <button type='button' className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700">Buy tickets</button>
@@ -120,9 +136,11 @@ export default function Home() {
             <span className="ml-10 font-serif font-bold">20:00</span>
           </div>
           <div className="flex flex-col justify-center ml-10 mt-3 md:mt-0 md:ml-0">
+          <a href='/shows/nutckracker'>
             <h2 className="text-4xl text-gray-900 font-serif font-medium">The Magic Flute</h2>
             <h4 className="text-lg text-gray-500 font-sans italic max-w-[600px]">David McVicar’s spectacular production of Mozart’s comic opera.
             </h4>
+          </a>
           </div>
           <div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
             <button type='button' className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700">Buy tickets</button>
