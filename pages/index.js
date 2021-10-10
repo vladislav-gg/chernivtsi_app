@@ -25,7 +25,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
       </Head>
       <div className="bg-white">
-        <nav className="flex flex-col justify-start md:items-center md:justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
+        <nav className="flex flex-col justify-start md:justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
           <div>
             <a href="/" id="logo" className="text-gray-900 font-semibold">Chernivtsi National Theatre </a>
           </div>
