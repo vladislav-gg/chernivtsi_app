@@ -23,11 +23,16 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet"/>
+
       </Head>
       <div className="bg-white">
-        <nav className="flex flex-col justify-start md:flex-row md:justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-[18px]">
+      {/* NAVIGATION */}
+        <nav className="flex flex-col justify-start md:flex-row md:justify-between w-full max-w-7xl p-8 mx-auto my-0 text-gray-900 text-xl">
           <div>
-            <a href="/" id="logo" className="text-gray-900 font-sans font-bold">Chernivtsi National Theatre </a>
+            <a href="/" id="logo" className="text-gray-900 font-sans font-semibold">Chernivtsi National Theatre </a>
           </div>
           <div className='mt-5'>
             <button type='button' className="mobile-burger-menu block text-gray-900 md:hidden" onClick={handleClick}>
@@ -65,18 +70,19 @@ export default function Home() {
           </div>
         </nav>
       </div>
-      <div className="relative w-full h-[850px]">
+      <div className="relative w-full h-[55rem]">
         <div className="w-full h-full bg-white absolute transition-all ease-in-out duration-1000 transform translate-x-0 slide z-0">
           <img className="object-cover h-full w-full" src="/images/swan_lake.jpg" alt="show" />
         </div>
         <div className="w-[20rem] h-[22rem] ml-16 mt-12 md:w-[32rem] md:h-[20rem] bg-white absolute z-10	md:mt-40 md:ml-64 ">
           <h3 className="font-serif font-semibold text-5xl py-5 px-7">The Nutcracker</h3>
-          <h4 className="text-base font-sans text-gray-400 mb-2 px-7 italic">1 March–28 May 2022</h4>
-          <h4 className="text-base font-sans px-7">The performance lasts about 3 hours, including two intervals.</h4>
-          <h4 className="text-base font-sans px-7 mt-1">Tickets price: £40-£120</h4>
+          <h4 className="text-lg font-sans text-gray-400 mb-2 px-7 italic">1 March–28 May 2022</h4>
+          <h4 className="text-lg font-sans px-7">The performance lasts about 3 hours, including two intervals.</h4>
+          <h4 className="text-lg font-sans px-7 mt-1">Tickets price: £40-£120</h4>
           <button type='button' className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 mt-7 px-7 ml-7">Buy tickets</button>
         </div>
       </div>
+      {/* EVENTS SECTION! */}
       <div className="events-section w-full h-full">
         <div className="flex items-center justify-center md:justify-start max-w-7xl mx-auto mt-10"> 
           <h1 className="text-gray-900 text-7xl font-serif font-medium">Next events</h1>
@@ -155,6 +161,7 @@ export default function Home() {
           </a>    
         </div>
       </div>
+      {/* NEWS SECTION */}
       <section className='max-w-[85%] mx-auto mt-16 h-full relative'>
                 <h1 className='font-serif text-7xl font-medium '>News</h1>
                 <div className='flex flex-col md:flex-row w-full h-full mt-12'>
@@ -207,6 +214,7 @@ export default function Home() {
                 </div>
                 <div className='border-b border-gray-600 mt-16'></div>
       </section>
+      {/* FOOTER */}
       <footer>
         <div className="w-full  h-full mb-16 mt-16 flex md:justify-between flex-col md:flex-row " >
           <div className="flex flex-col sm:ml-16  md:max-w-4xl md:mx-auto md:justify-start "> 
