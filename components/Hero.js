@@ -11,7 +11,7 @@ export default function Hero() {
 							alt="show"
 						/>
 					</div>
-					<div className="w-[20rem] h-[22rem] ml-16 mt-12 md:w-[32rem] md:h-[20rem] bg-white absolute z-10	md:mt-40 md:ml-64 ">
+					<div className="w-[20rem] h-[22rem] ml-16 mt-12 md:w-[32rem] md:h-[20rem] bg-white absolute z-10 md:mt-40 md:ml-64 ">
 						<h3 className="font-serif font-semibold text-5xl py-5 px-7">
 							Swan Lake
 						</h3>
