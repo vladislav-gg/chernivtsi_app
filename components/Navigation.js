@@ -47,26 +47,26 @@ export default function Navigation() {
 					<div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9 font-sans">
 						<a
 							href="/events"
-							className="text-gray-900 hover:border-b border-gray-700"
+							className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700"
 						>
 							Tickets and Events
 						</a>
 						<a
 							href="/about"
-							className="text-gray-900 hover:border-b border-gray-700"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700"
 						>
 							About
 						</a>
 						<a
 							href="/news"
-							className="text-gray-900 hover:border-b border-gray-700"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700"
 						>
 							News
 						</a>
 						{!session && (
 							<>
 								<button
-									className="hover:border-b border-gray-700"
+									className="border-b border-transparent hover:border-b hover:border-gray-700"
 									onClick={() =>
 										signIn("google", { callbackUrl: "http://localhost:3000/" })
 									}
