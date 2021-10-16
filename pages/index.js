@@ -11,9 +11,8 @@ import Navigation from '../components/Navigation';
 
 export default function Home() {
   return (
-    <body className="text-black">
+    <body>
       <Head>
-        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
