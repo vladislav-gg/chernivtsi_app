@@ -9,7 +9,7 @@ export default function about() {
                 <Navigation/>
             </div>
             <div className='text-gray-800 font-serif text-4xl max-w-6xl mx-auto mt-16 leading-[3rem]'>
-                <h1 className='py-7'>I decided to create this website for my hometown theatre as I thought that it would be a nice idea. This website is probably half finished at this moment and I already hate how it looks. But, regardless of the outcome I learn a lot on the day to day basis. 
+                <h1 className='py-7'>I decided to create this website for my hometown theatre as I thought it would be a nice idea. This website is probably half finished at this moment and I already hate how it looks. But, regardless of the outcome I learn a lot on the day to day basis. 
                 </h1>
 
                 <h1 class='pb-7'>
@@ -17,7 +17,7 @@ export default function about() {
                 </h1>
 
                 <h1 className=''>
-                Tune in. IDK why I write this all right now, but I don't want my pages to be emplty, so I will include some content in each. 
+                Tune in. IDK why I write this all right now, but I don't want my pages to be empty, so I will include some content in each. 
                 </h1>
                 
                 <h1 className='pt-7'>
