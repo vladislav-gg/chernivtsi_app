@@ -10,7 +10,6 @@ export default function Navigation() {
         setActive(!active);
     };
     return (
-
 			<div>
 				<nav className="flex flex-col border-b justify-between md:h-[5rem] h-full ml-8 mr-8 md:mb-0 md:flex-row md:justify-between md:max-w-7xl md:mx-auto text-gray-900 text-xl items-center">
 					<div className="">
@@ -44,29 +43,29 @@ export default function Navigation() {
 							</svg>
 						</button>
 					</div>
-					<div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9 font-sans">
+					<div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9">
 						<a
 							href="/events"
-							className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
+							className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 						>
 							Tickets and Events
 						</a>
 						<a
 							href="/about"
-							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 						>
 							About
 						</a>
 						<a
 							href="/news"
-							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 						>
 							News
 						</a>
 						{!session && (
 							<>
 								<button
-									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
+									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 									onClick={() =>
 										signIn("google", { callbackUrl: "http://localhost:3000/" })
 									}
@@ -86,13 +85,13 @@ export default function Navigation() {
 							active ? "md:hidden" : "hidden"
 						}  flex flex-col items-start mt-5 mb-5 text-xl `}
 					>
-						<a href="/events" className="text-gray-900  font-normal">
+						<a href="/events" className="text-gray-900  font-normal text-lg">
 							Tickets and Events
 						</a>
-						<a href="/about" className="text-gray-900 font-normal">
+						<a href="/about" className="text-gray-900 font-normal text-lg">
 							About
 						</a>
-						<a href="/news" className="text-gray-900 font-normal">
+						<a href="/news" className="text-gray-900 font-normal text-lg">
 							News
 						</a>
 					</div>
