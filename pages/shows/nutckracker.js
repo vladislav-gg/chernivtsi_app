@@ -67,7 +67,7 @@ export default function nutckracker() {
 						<div className="w-full h-full bg-white absolute transition-all ease-in-out duration-1000 transform translate-x-0 slide z-0">
 							<img
 								className="object-cover h-full w-full"
-								src="/images/nutcracker3.jpeg"
+								src="public/images/nutcracker3.jpeg"
 								alt="show"
 							/>
 						</div>
