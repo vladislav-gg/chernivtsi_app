@@ -28,7 +28,7 @@ export default function Events() {
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
 							<button
 								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-base font-sans"
+								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
 							>
 								Buy tickets
 							</button>
@@ -51,7 +51,7 @@ export default function Events() {
 							</a>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
-							<button className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-base font-sans">
+							<button className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans">
 								Buy tickets
 							</button>
 						</div>
@@ -75,7 +75,7 @@ export default function Events() {
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
 							<button
 								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-base font-sans"
+								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
 							>
 								Buy tickets
 							</button>
@@ -101,7 +101,7 @@ export default function Events() {
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
 							<button
 								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-base font-sans"
+								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
 							>
 								Buy tickets
 							</button>
