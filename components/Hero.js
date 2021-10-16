@@ -4,7 +4,7 @@ export default function Hero() {
     return (
 			<div>
 				<div className="relative w-full h-[55rem]">
-					<div className="w-full h-full bg-white absolute transition-all ease-in-out duration-1000 transform translate-x-0 slide z-0">
+					<div className="w-full h-full bg-white absolute  z-0">
 						<img
 							className="object-cover h-full w-full"
 							src="/images/swan_lake.jpg"
