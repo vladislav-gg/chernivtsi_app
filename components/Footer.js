@@ -6,19 +6,19 @@ export default function Footer() {
 			<footer className='bg-white'>
 				<div className="w-full  h-full mb-16 mt-16 flex md:justify-between flex-col md:flex-row ">
 					<div className="flex flex-col ml-10  md:max-w-4xl md:mx-auto md:justify-start ">
-						<span className="font-sans text-gray-900 text-4xl mt-24">
+						<h1 className="font-sans text-gray-900 text-4xl mt-24">
 							Contact us
-						</span>
-						<span className="font-sans text-gray-900 text-xl mt-5">
+						</h1>
+						<p className="font-sans text-gray-900 text-xl mt-5">
 							Phone: +380 372 522 628
-						</span>
-						<span className="font-sans text-gray-900 text-xl mt-5">
+						</p>
+						<p className="font-sans text-gray-900 text-xl mt-5">
 							Address: Theater Square, 1, Chernivtsi, Chernivtsi region,
 							Ukraine, 58000
-						</span>
-						<span className="font-sans text-gray-900 text-xl mt-5">
+						</p>
+						<p className="font-sans text-gray-900 text-xl mt-5">
 							Email: dramteatr@i.ua
-						</span>
+						</p>
 						<div className="flex flex-row mt-5">
 							<a
 								className="mr-3"
