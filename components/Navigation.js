@@ -47,26 +47,26 @@ export default function Navigation() {
 					<div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9 font-sans">
 						<a
 							href="/events"
-							className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700"
+							className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
 						>
 							Tickets and Events
 						</a>
 						<a
 							href="/about"
-							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
 						>
 							About
 						</a>
 						<a
 							href="/news"
-							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700"
+							className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
 						>
 							News
 						</a>
 						{!session && (
 							<>
 								<button
-									className="border-b border-transparent hover:border-b hover:border-gray-700"
+									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal"
 									onClick={() =>
 										signIn("google", { callbackUrl: "http://localhost:3000/" })
 									}
@@ -86,13 +86,13 @@ export default function Navigation() {
 							active ? "md:hidden" : "hidden"
 						}  flex flex-col items-start mt-5 mb-5 text-xl `}
 					>
-						<a href="/events" className="text-gray-900 ">
+						<a href="/events" className="text-gray-900  font-normal">
 							Tickets and Events
 						</a>
-						<a href="/about" className="text-gray-900 ">
+						<a href="/about" className="text-gray-900 font-normal">
 							About
 						</a>
-						<a href="/news" className="text-gray-900 ">
+						<a href="/news" className="text-gray-900 font-normal">
 							News
 						</a>
 					</div>
