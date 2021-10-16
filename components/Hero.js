@@ -26,7 +26,7 @@ export default function Hero() {
 						</h4>
 						<button
 							type="button"
-							className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 mt-7 px-7 ml-7"
+							className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 mt-7 px-7 ml-7 text-lg font-sans"
 						>
 							Buy tickets
 						</button>
