@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
 	return (
 		<div>
-			<footer className='bg-[#F3ECEB]'>
+			<footer className='bg-[#FFFEF3] h-[35rem]'>
 				<div className="w-full  h-full mb-16 mt-16 flex md:justify-between flex-col md:flex-row ">
 					<div className="flex flex-col ml-10  md:max-w-4xl md:mx-auto md:justify-start ">
 						<h1 className="font-sans text-gray-900 text-4xl mt-24">
@@ -54,13 +54,13 @@ export default function Footer() {
 						</h3>
 						<div className="mt-5 border-none mb-5 flex justify-center">
 							<input
-								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 focus:outline-none"
+								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 focus:outline-none bg-transparent"
 								placeholder="Name"
 								type="text"
 								required
 							></input>
 							<input
-								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none"
+								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
 								placeholder="Email"
 								type="email"
 								required
