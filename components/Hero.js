@@ -21,7 +21,7 @@ export default function Hero() {
 						<h4 className="text-lg font-sans px-7">
 							The performance lasts about 3 hours, including two intervals.
 						</h4>
-						<h4 className="text-lg font-sans px-7 mt-4">
+						<h4 className="text-lg font-sans px-7 mt-1">
 							Tickets price: £40-£120
 						</h4>
 						<button
