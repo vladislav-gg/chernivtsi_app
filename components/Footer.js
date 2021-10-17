@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
 	return (
 		<div>
-			<footer className='bg-white'>
+			<footer className='bg-[#F3ECEB]'>
 				<div className="w-full  h-full mb-16 mt-16 flex md:justify-between flex-col md:flex-row ">
 					<div className="flex flex-col ml-10  md:max-w-4xl md:mx-auto md:justify-start ">
 						<h1 className="font-sans text-gray-900 text-4xl mt-24">
