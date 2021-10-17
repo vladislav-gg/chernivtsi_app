@@ -4,7 +4,7 @@ export default function Footer() {
 	return (
 		<div>
 			<footer className='bg-[#fff] h-[40rem]'>
-				<div className="w-full flex flex-col items-center mt-56">
+				<div className="w-full flex flex-col md:items-center mt-56">
 					<form className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
 						<h3 className="text-4xl flex justify-center">
 							{" "}
@@ -12,13 +12,13 @@ export default function Footer() {
 						</h3>
 						<div className="mt-5 border-none mb-5 flex justify-center">
 							<input
-								className="text-black font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent"
+								className="text-black font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent placeholder-opacity-50"
 								placeholder="Name"
 								type="text"
 								required
 							></input>
 							<input
-								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
+								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
 								placeholder="Email"
 								type="email"
 								required
@@ -27,27 +27,31 @@ export default function Footer() {
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
 							<button
 								type="button"
-								className="text-black font-semibold  px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
+								className="text-black font-normal text-lg px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
 							>
 								Sign up
 							</button>
 						</div>
 					</form>
-					<div className="flex md:flex-row justify-evenly ml-10 md:max-w-6xl md:mx-auto space-x-16 mt-40">
-						<p className="font-sans text-black  text-base mt-5">
+					<div className="flex flex-col  md:flex-row  md:max-w-6xl md:mx-auto md:space-x-16 mt-40 ml-10">
+						<p className="font-sans text-black  text-lg">
 							<span className='font-semibold'>Phone:</span> +380 372 522 628
 						</p>
-						<p className="font-sans text-black  text-base mt-5">
+						<p className="font-sans text-black  text-lg mt-5 md:mt-0">
 							<p className='font-semibold'>Address:</p> 
 							<p>Teatral'na Square, 1, Chernivtsi,</p> 
 							<p>Chernivtsi region,Ukraine, 58000</p>
 						</p>
-						<p className="font-sans text-black  text-base mt-5">
+						<p className="font-sans text-black  text-lg mt-5  md:mt-0">
 							<span className='font-semibold'>Email:</span> dramteatr@i.ua
 						</p>
-						<div className="flex flex-row mt-5 space-x-16 font-semibold">
-							<a href='https://www.instagram.com/dramtheater_cv/'>Instagram</a>
-							<a href='https://www.facebook.com/dramtheater'>Facebook</a>
+						<div className="flex flex-row space-x-16 font-semibold mt-5 md:mt-0">
+							<dvi className='text-lg '>
+								<a  href='https://www.instagram.com/dramtheater_cv/'>Instagram</a>
+							</dvi>
+							<div className='text-lg '>
+								<a  href='https://www.facebook.com/dramtheater'>Facebook</a>
+							</div>
 							{/* <a
 								className="mr-3"
 								href="https://www.instagram.com/dramtheater_cv/"
