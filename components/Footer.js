@@ -3,24 +3,52 @@ import React from "react";
 export default function Footer() {
 	return (
 		<div>
-			<footer className='bg-[#FFFEF3] h-[35rem]'>
-				<div className="w-full  h-full mb-16 mt-16 flex md:justify-between flex-col md:flex-row ">
-					<div className="flex flex-col ml-10  md:max-w-4xl md:mx-auto md:justify-start ">
-						<h1 className="font-sans text-gray-900 text-4xl mt-24">
-							Contact us
-						</h1>
-						<p className="font-sans text-gray-900 text-xl mt-5">
-							Phone: +380 372 522 628
+			<footer className='bg-[#fff] h-[40rem]'>
+				<div className="w-full flex flex-col items-center mt-56">
+					<form className="my-form  font-sans text-gray-900 font-semibold w-full max-w-md mx-auto flex flex-col">
+						<h3 className="text-4xl flex justify-center">
+							{" "}
+							Subscribe to our newsletter
+						</h3>
+						<div className="mt-5 border-none mb-5 flex justify-center">
+							<input
+								className="text-gray-900 font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent"
+								placeholder="Name"
+								type="text"
+								required
+							></input>
+							<input
+								className="text-gray-900 placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
+								placeholder="Email"
+								type="email"
+								required
+							></input>
+						</div>
+						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
+							<button
+								type="button"
+								className="text-gray-900 font-semibold  px-10 py-2 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-gray-100 duration-700"
+							>
+								Sign up
+							</button>
+						</div>
+					</form>
+					<div className="flex md:flex-row justify-evenly ml-10 md:max-w-6xl md:mx-auto space-x-16 mt-40">
+						<p className="font-sans text-gray-900  text-base mt-5">
+							<span className='font-semibold'>Phone:</span> +380 372 522 628
 						</p>
-						<p className="font-sans text-gray-900 text-xl mt-5">
-							Address: Theater Square, 1, Chernivtsi, Chernivtsi region,
-							Ukraine, 58000
+						<p className="font-sans text-gray-900  text-base mt-5">
+							<p className='font-semibold'>Address:</p> 
+							<p>Teatral'na Square, 1, Chernivtsi,</p> 
+							<p>Chernivtsi region,Ukraine, 58000</p>
 						</p>
-						<p className="font-sans text-gray-900 text-xl mt-5">
-							Email: dramteatr@i.ua
+						<p className="font-sans text-gray-900  text-base mt-5">
+							<span className='font-semibold'>Email:</span> dramteatr@i.ua
 						</p>
-						<div className="flex flex-row mt-5">
-							<a
+						<div className="flex flex-row mt-5 space-x-16 font-semibold">
+							<a href='https://www.instagram.com/dramtheater_cv/'>Instagram</a>
+							<a href='https://www.facebook.com/dramtheater'>Facebook</a>
+							{/* <a
 								className="mr-3"
 								href="https://www.instagram.com/dramtheater_cv/"
 							>
@@ -44,37 +72,9 @@ export default function Footer() {
 								>
 									<path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
 								</svg>
-							</a>
+							</a> */}
 						</div>
 					</div>
-					<form className="my-form  font-sans text-gray-900 w-full max-w-md mx-auto mt-24 flex flex-col">
-						<h3 className="text-4xl flex justify-center">
-							{" "}
-							Subscribe to our newsletter
-						</h3>
-						<div className="mt-5 border-none mb-5 flex justify-center">
-							<input
-								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 focus:outline-none bg-transparent"
-								placeholder="Name"
-								type="text"
-								required
-							></input>
-							<input
-								className="text-gray-900 py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
-								placeholder="Email"
-								type="email"
-								required
-							></input>
-						</div>
-						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
-							<button
-								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
-							>
-								Sign up
-							</button>
-						</div>
-					</form>
 				</div>
 			</footer>
 		</div>
