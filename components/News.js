@@ -59,7 +59,7 @@ export default function News() {
                         </svg>
                         </a>    
                     </div>
-                    <div className='border-b border-gray-600 mt-16'></div>
+                    <div className=' mt-16'></div>
              </section>
         </div>
     )
