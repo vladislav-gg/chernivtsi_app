@@ -20,7 +20,7 @@ export default function Events() {
 								<h2 className="text-4xl text-gray-900 font-serif font-medium">
 									Swan Lake
 								</h2>
-								<h4 className="text-lg text-gray-500 font-sans italic">
+								<h4 className="text-lg text-gray-500 font-sans italic mt-4 md:mt-0">
 									Commedia per musica in four acts by Wolfgang Amadeus Mozart
 								</h4>
 							</a>
@@ -45,7 +45,7 @@ export default function Events() {
 								<h2 className="text-4xl text-gray-900 font-serif font-medium">
 									The Nutcracker
 								</h2>
-								<h4 className="text-lg text-gray-500 font-sans italic">
+								<h4 className="text-lg text-gray-500 font-sans italic mt-4 md:mt-0">
 									Commedia per musica in four acts by Wolfgang Amadeus Mozart
 								</h4>
 							</a>
@@ -67,7 +67,7 @@ export default function Events() {
 								<h2 className="text-4xl text-gray-900 font-serif font-medium">
 									Romeo and Juliet
 								</h2>
-								<h4 className="text-lg text-gray-500 font-sans italic">
+								<h4 className="text-lg text-gray-500 font-sans italic mt-4 md:mt-0">
 									Commedia per musica in four acts by Wolfgang Amadeus Mozart
 								</h4>
 							</a>
@@ -92,7 +92,7 @@ export default function Events() {
 								<h2 className="text-4xl text-gray-900 font-serif font-medium">
 									The Magic Flute
 								</h2>
-								<h4 className="text-lg text-gray-500 font-sans italic max-w-[600px]">
+								<h4 className="text-lg text-gray-500 font-sans italic max-w-[600px] mt-4 md:mt-0">
 									David McVicar’s spectacular production of Mozart’s comic
 									opera.
 								</h4>
