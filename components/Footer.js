@@ -5,20 +5,20 @@ export default function Footer() {
 		<div>
 			<footer className='bg-[#fff] h-[40rem]'>
 				<div className="w-full flex flex-col items-center mt-56">
-					<form className="my-form  font-sans text-gray-900 font-semibold w-full max-w-md mx-auto flex flex-col">
+					<form className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
 						<h3 className="text-4xl flex justify-center">
 							{" "}
 							Subscribe to our newsletter
 						</h3>
 						<div className="mt-5 border-none mb-5 flex justify-center">
 							<input
-								className="text-gray-900 font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent"
+								className="text-black font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent"
 								placeholder="Name"
 								type="text"
 								required
 							></input>
 							<input
-								className="text-gray-900 placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
+								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent"
 								placeholder="Email"
 								type="email"
 								required
@@ -27,22 +27,22 @@ export default function Footer() {
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
 							<button
 								type="button"
-								className="text-gray-900 font-semibold  px-10 py-2 border-2 border-gray-900 text-gray-900 font-semibold hover:bg-gray-900 hover:text-gray-100 duration-700"
+								className="text-black font-semibold  px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
 							>
 								Sign up
 							</button>
 						</div>
 					</form>
 					<div className="flex md:flex-row justify-evenly ml-10 md:max-w-6xl md:mx-auto space-x-16 mt-40">
-						<p className="font-sans text-gray-900  text-base mt-5">
+						<p className="font-sans text-black  text-base mt-5">
 							<span className='font-semibold'>Phone:</span> +380 372 522 628
 						</p>
-						<p className="font-sans text-gray-900  text-base mt-5">
+						<p className="font-sans text-black  text-base mt-5">
 							<p className='font-semibold'>Address:</p> 
 							<p>Teatral'na Square, 1, Chernivtsi,</p> 
 							<p>Chernivtsi region,Ukraine, 58000</p>
 						</p>
-						<p className="font-sans text-gray-900  text-base mt-5">
+						<p className="font-sans text-black  text-base mt-5">
 							<span className='font-semibold'>Email:</span> dramteatr@i.ua
 						</p>
 						<div className="flex flex-row mt-5 space-x-16 font-semibold">
