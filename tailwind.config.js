@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Source Sans Pro', ...fontFamily.sans],
+        sans: ['Pt Sans', ...fontFamily.sans],
         serif: ['EB Garamond', ...fontFamily.serif]
       },
     },
