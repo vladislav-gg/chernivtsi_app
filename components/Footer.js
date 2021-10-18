@@ -1,15 +1,48 @@
 import React from "react";
+import { useRef, useState } from 'react';
 
 export default function Footer() {
+	  // 1. Create a reference to the input so we can fetch/clear it's value.
+	  const inputEl = useRef(null);
+	  // 2. Hold a message in state to handle the response from our API.
+	  const [message, setMessage] = useState('');
+	
+	  const subscribe = async (e) => {
+		e.preventDefault();
+	
+		// 3. Send a request to our API with the user's email address.
+		const res = await fetch('/api/subscribe', {
+		  body: JSON.stringify({
+			email: inputEl.current.value
+		  }),
+		  headers: {
+			'Content-Type': 'application/json'
+		  },
+		  method: 'POST'
+		});
+	
+		const { error } = await res.json();
+	
+		if (error) {
+		  // 4. If there was an error, update the message in state.
+		  setMessage(error);
+	
+		  return;
+		}
+		// 5. Clear the input value and show a success message.
+		inputEl.current.value = '';
+		setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+	  };
+	
 	return (
 		<div>
 			<footer className='bg-[#fff] h-[40rem]'>
 				<div className="w-full flex flex-col md:items-center mt-56">
-					<form className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
-						<h3 className="text-4xl flex justify-center">
+					<form onSubmit={subscribe} className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
+						<label htmlFor='email-input' className="text-4xl flex justify-center">
 							{" "}
 							Subscribe to our newsletter
-						</h3>
+						</label>
 						<div className="mt-5 border-none mb-5 flex justify-center">
 							<input
 								className="text-black font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent placeholder-opacity-50"
@@ -22,11 +55,12 @@ export default function Footer() {
 								placeholder="Email"
 								type="email"
 								required
+								ref={inputEl}
 							></input>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
 							<button
-								type="button"
+								type="submit"
 								className="text-black font-normal text-lg px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
 							>
 								Sign up
