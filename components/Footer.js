@@ -5,7 +5,7 @@ export default function Footer() {
 	  // 1. Create a reference to the input so we can fetch/clear it's value.
 	  const inputEl = useRef(null);
 	  // 2. Hold a message in state to handle the response from our API.
-	  const [message, setMessage] = useState('');
+	  const [message, setMessage] = useState('Subscribe to our newsletter');
 	
 	  const subscribe = async (e) => {
 		e.preventDefault();
@@ -40,18 +40,17 @@ export default function Footer() {
 				<div className="w-full flex flex-col md:items-center mt-56">
 					<form onSubmit={subscribe} className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
 						<label htmlFor='email-input' className="text-4xl flex justify-center">
-							{" "}
-							Subscribe to our newsletter
+							{message}
 						</label>
 						<div className="mt-5 border-none mb-5 flex justify-center">
-							<input
+							{/* <input
 								className="text-black font-semibold py-3 px-2 w-56 border-b placeholder-gray-900 border-gray-500 focus:outline-none bg-transparent placeholder-opacity-50"
 								placeholder="Name"
 								type="text"
 								required
-							></input>
+							></input> */}
 							<input
-								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-56 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
+								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-80 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
 								placeholder="Email"
 								type="email"
 								required
