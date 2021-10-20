@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../components/Burger';
-import { useSession, signIn, signOut } from "next-auth/client"
 import MyApp from './_app';
-import { useState } from 'react';
 import Footer from '../components/Footer';
 import Events from '../components/Events';
 import News from '../components/News';
