@@ -12,7 +12,7 @@ export default class Slider extends Component {
                 </div>
                 <div className="w-[32rem] h-56 bg-white absolute z-10	mt-40 ml-56">
                     <h3 className="font-sans font-semibold text-2xl py-5 px-7">The Nutcracker</h3>
-                    <h4 className="text-sm text-gray-600 mb-2 px-7">1 March–28 May 2022</h4>
+                    <h4 className="text-sm text-gray-600 mb-2 px-7">2 March–28 May 2022</h4>
                     <h4 className="text-sm px-7">The performance lasts about 3 hours, including two intervals.</h4>
                     <h4 className="text-sm px-7">Tickets price: £40-£120</h4>
                     <button className="border-2 text-sm mt-7 px-7 ml-7">Buy tickets</button>
