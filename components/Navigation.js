@@ -1,11 +1,13 @@
 import React from 'react'
-import { useSession, signIn, signOut } from "next-auth/client"
+import { useSession, signIn, signOut } from "next-auth/react"
 import { useState } from 'react';
 
 export default function Navigation() {
-    const { session, loading } = useSession()
+    const { data: session } = useSession()
     const [active, setActive] = useState(false);
 
+
+	// Burger menu toggle
     const handleClick = () => {
         setActive(!active);
     };
@@ -67,7 +69,7 @@ export default function Navigation() {
 								<button
 									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 									onClick={() =>
-										signIn("google", { callbackUrl: "http://localhost:3000/" })
+										signIn("google", { callbackUrl: "https://chernivtsi-theatre.vercel.app/api/auth/callback/google" })
 									}
 								>
 									Sign in
