@@ -64,23 +64,34 @@ export default function Navigation() {
 						>
 							News
 						</a>
-						{!session && (
+						{session && (
+							<div className='text-gray-900 font-normal text-lg' >
+								Signed in as {session.user.name} <br />
+							</div>
+						)}
+						{!session ? (
 							<>
 								<button
 									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 									onClick={() =>
-										signIn("google", { callbackUrl: "https://chernivtsi-theatre.vercel.app/api/auth/callback/google" })
+										signIn('google')
 									}
 								>
 									Sign in
 								</button>
 							</>
-						)}
-						{session && (
-							<>
-								Signed in as {session.user.name} <br />
-							</>
-						)}
+						):(
+							<button
+									className="border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
+									onClick={() =>
+										signOut()
+									}
+								>
+									Sign Out
+								</button>
+						)
+						}
+						
 					</div>
 					<div
 						className={`${
