@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signIn, signOut, getSession  } from "next-auth/react"
 import { useState } from 'react';
 
 export default function Navigation() {
@@ -112,3 +112,11 @@ export default function Navigation() {
 			</div>
 		);
 }
+export async function getServerSideProps(context) {
+	return {
+	  props: {
+		session: await getSession(context)
+	  }
+	}
+  }
+  
