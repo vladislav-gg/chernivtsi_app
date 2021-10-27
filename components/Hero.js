@@ -10,7 +10,7 @@ export default function Hero() {
 
     return (
 			<div ref={sliderRef} className="keen-slider">
-				<div className="keen-slider__slide relative w-full h-[50rem]">
+				<div className="keen-slider__slide relative w-full h-[55rem]">
 					<div className="w-full h-full bg-white absolute z-0">
 						<Image
 							className="object-cover h-full w-full"
@@ -43,7 +43,7 @@ export default function Hero() {
 						</button>
 					</div>
 				</div>
-				<div className="keen-slider__slide relative w-full h-[50rem]">
+				<div className="keen-slider__slide relative w-full h-[55rem]">
 					<div className="w-full h-full bg-white absolute z-0">
 					<Image
 							className="object-cover h-full w-full"
@@ -76,7 +76,7 @@ export default function Hero() {
 						</button>
 					</div>
 				</div>
-				<div className="keen-slider__slide relative w-full h-[50rem]">
+				<div className="keen-slider__slide relative w-full h-[55rem]">
 					<div className="w-full h-full bg-white absolute z-0">
 						<Image
 							className="object-cover h-full w-full"
