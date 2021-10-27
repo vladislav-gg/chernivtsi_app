@@ -112,11 +112,5 @@ export default function Navigation() {
 			</div>
 		);
 }
-export async function getServerSideProps(context) {
-	return {
-	  props: {
-		session: await getSession(context)
-	  }
-	}
-  }
+
   
