@@ -47,7 +47,7 @@ export default function Hero() {
 					<div className="w-full h-full bg-white absolute z-0">
 					<Image
 							className="object-cover h-full w-full"
-							src="/images/nutckracker3.jpeg"
+							src="/images/Lebedinoe_ozero.jpg"
 							alt="show"
 							width={1800}
 							height={850}
