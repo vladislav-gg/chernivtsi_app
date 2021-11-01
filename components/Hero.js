@@ -5,16 +5,7 @@ import Image from 'next/image';
 
 
 export default function Hero() {
-	const [currentSlide, setCurrentSlide] = React.useState(0)
-
-	const [sliderRef, slider] = useKeenSlider({ 
-		loop: true,
-		initial: 0,
-		slideChanged(s){
-			setCurrentSlide(s.details().relativeSlide)
-		},
-	
-	})
+	const [sliderRef] = useKeenSlider({ loop: true })
 
 
     return (
@@ -54,7 +45,7 @@ export default function Hero() {
 					</div> */}
 					{/* WHITE DIV ENDS */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-					<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
+					<div className='absolute left-44 bottom-40 text-white opacity-90'>
 						<div>
 							<a href='shows/nutckracker'>
 
@@ -115,7 +106,7 @@ export default function Hero() {
 					</div> */}
 					{/* WHITE DIV ENDS */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-						<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
+						<div className='absolute left-44 bottom-40 text-white opacity-90'>
 							<div>
 							<a href='shows/nutckracker'>
 								<h3 className="font-serif font-semibold text-7xl py-5 px-7">
@@ -173,7 +164,7 @@ export default function Hero() {
 						</button>
 					</div> */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-						<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
+						<div className='absolute left-44 bottom-40 text-white opacity-90'>
 							<div>
 							<a href='shows/nutckracker'>
 								<h3 className="font-serif font-semibold text-7xl py-5 px-7">
@@ -199,21 +190,7 @@ export default function Hero() {
 							</div>
 						</div>
 				</div>
-				{slider && (
-				<div className="dots">
-				{[...Array(slider.details().size).keys()].map((idx) => {
-					return (
-					<button
-						key={idx}
-						onClick={() => {
-						slider.moveToSlideRelative(idx)
-						}}
-						className={"dot" + (currentSlide === idx ? " active" : "")}
-					/>
-					)
-				})}
-				</div>
-      	)}
+				
 			</div>
 		);
 }
