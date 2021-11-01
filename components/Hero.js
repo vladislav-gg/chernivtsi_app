@@ -18,7 +18,7 @@ export default function Hero() {
 							alt="show"
 							width={1800}
 							height={750}
-							priority='true'
+							priority={true}
 							layout="fill"
 
 						/>
@@ -80,7 +80,7 @@ export default function Hero() {
 							alt="show"
 							width={1800}
 							height={850}
-							priority='true'
+							priority={true}
 							layout="fill"
 							
 						/>
@@ -140,7 +140,7 @@ export default function Hero() {
 							alt="show"
 							width={1800}
 							height={950}
-							priority='true'
+							priority={true}
 							layout="fill"
 						/>
 					</div>
