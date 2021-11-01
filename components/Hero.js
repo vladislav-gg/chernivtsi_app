@@ -45,7 +45,7 @@ export default function Hero() {
 					</div> */}
 					{/* WHITE DIV ENDS */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-					<div className='absolute left-44 bottom-40 text-white opacity-90'>
+					<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
 						<div>
 							<a href='shows/nutckracker'>
 
@@ -106,7 +106,7 @@ export default function Hero() {
 					</div> */}
 					{/* WHITE DIV ENDS */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-						<div className='absolute left-44 bottom-40 text-white opacity-90'>
+						<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
 							<div>
 							<a href='shows/nutckracker'>
 								<h3 className="font-serif font-semibold text-7xl py-5 px-7">
@@ -164,7 +164,7 @@ export default function Hero() {
 						</button>
 					</div> */}
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
-						<div className='absolute left-44 bottom-40 text-white opacity-90'>
+						<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
 							<div>
 							<a href='shows/nutckracker'>
 								<h3 className="font-serif font-semibold text-7xl py-5 px-7">
