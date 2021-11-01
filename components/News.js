@@ -3,13 +3,13 @@ import React from 'react'
 export default function News() {
     return (
         <div>
-            <section className='max-w-[85%] mx-auto mt-16 h-full relative'>
+            <section className='max-w-[85%] mx-auto mt-28 h-full relative'>
                 <h1 className='font-serif text-7xl font-medium '>News</h1>
                     <div className='flex flex-col md:flex-row w-full h-full mt-12'>
                         <div className='md:max-w-md'>
                             <div className='left-col hover:shadow-lg transition duration-200 ease-in p-5'>
                                 <a href='/shows/nutckracker'>
-                                <img src='/images/the_nutckracker.jpg'></img>
+                                <img src='/images/giselle.jpg'></img>
                                 <div className="flex flex-col pt-5"> 
                                     <p className="text-xl text-gray-500 mt-1">20 September 2021</p>
                                     <h3 className="text-2xl text-gray-900 mt-5">New ballet in our theatre</h3>
