@@ -9,7 +9,7 @@ export default function News() {
                         <div className='md:max-w-md'>
                             <div className='left-col hover:shadow-lg transition duration-200 ease-in p-5'>
                                 <a href='/shows/nutckracker'>
-                                <img src='/images/nutcracker5.png'></img>
+                                <img src='/images/the_nutckracker.jpg'></img>
                                 <div className="flex flex-col pt-5"> 
                                     <p className="text-xl text-gray-500 mt-1">20 September 2021</p>
                                     <h3 className="text-2xl text-gray-900 mt-5">New ballet in our theatre</h3>
