@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button';
 
 export default function Events() {
     return (
@@ -26,12 +27,7 @@ export default function Events() {
 							</a>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
-							<button
-								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
-							>
-								Buy tickets
-							</button>
+							<Button/>
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row md:justify-between mt-10  max-w-7xl mx-auto border-b border-gray-600 border-t border-gray-600 py-8">
@@ -51,9 +47,7 @@ export default function Events() {
 							</a>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
-							<button className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans">
-								Buy tickets
-							</button>
+							<Button/>
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row md:justify-between mt-10  max-w-7xl mx-auto border-b border-gray-600 border-t border-gray-600 py-8">
@@ -73,12 +67,7 @@ export default function Events() {
 							</a>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
-							<button
-								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
-							>
-								Buy tickets
-							</button>
+							<Button/>
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row md:justify-between mt-10  max-w-7xl mx-auto border-b border-gray-600 border-t border-gray-600 py-8">
@@ -99,12 +88,7 @@ export default function Events() {
 							</a>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0">
-							<button
-								type="button"
-								className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans"
-							>
-								Buy tickets
-							</button>
+							<Button/>
 						</div>
 					</div>
 					<div className="more-events w-full flex flex-row justify-center items-center align-middle mt-10 ">

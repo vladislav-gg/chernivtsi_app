@@ -1,6 +1,9 @@
 import React from 'react'
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
+import Button from '../../components/Button';
+import PreviewPage from '../checkout';
+
 export default function nutckracker() {
     return (
 			<div className="w-full h-full">
@@ -74,7 +77,7 @@ export default function nutckracker() {
                                 <p className='text-xl mt-3 '>16:00 / 19:00</p>
                             </div>    
                             <div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
-                             <button type='button' className="text-gray-900  px-10 py-2 border-2 border-gray-600 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700">Buy tickets</button>
+								<Button/>
                             </div>
                         </div>
 					</div>

@@ -2,6 +2,8 @@ import React from 'react'
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import Image from 'next/image';
+import PreviewPage from '../pages/checkout';
+import HeroButton from './HeroButton';
 
 
 export default function Hero() {
@@ -62,12 +64,9 @@ export default function Hero() {
 								<h4 className="text-2xl font-sans px-7 mt-1">
 									Tickets price: £40-£120
 								</h4>
-								<button
-									type="button"
-									className="text-white px-10 py-2 border border-white text-gray-900 hover:bg-gray-900 hover:text-gray-100 hover:border-gray-900   duration-700 mt-7 px-7 ml-7 text-lg font-sans"
-								>
-									Buy tickets
-								</button>
+								<form action="/api/checkout_sessions" method="POST">
+									<HeroButton/>
+								</form>
 							</a>
 						</div>
 					</div>
@@ -122,12 +121,9 @@ export default function Hero() {
 								<h4 className="text-2xl font-sans px-7 mt-1">
 									Tickets price: £40-£120
 								</h4>
-								<button
-									type="button"
-									className="text-white px-10 py-2 border border-white text-gray-900 hover:bg-gray-900 hover:text-gray-100 hover:border-gray-900   duration-700 mt-7 px-7 ml-7 text-lg font-sans"
-								>
-									Buy tickets
-								</button>
+								<form action="/api/checkout_sessions" method="POST">
+									<HeroButton/>
+								</form>
 							</a>
 							</div>
 						</div>
@@ -181,12 +177,9 @@ export default function Hero() {
 								<h4 className="text-2xl font-sans px-7 mt-1">
 									Tickets price: £40-£120
 								</h4>
-								<button
-									type="button"
-									className="text-white px-10 py-2 border border-white text-gray-900 hover:bg-gray-900 hover:text-gray-100 hover:border-gray-900   duration-700 mt-7 px-7 ml-7 text-lg font-sans"
-								>
-									Buy tickets
-								</button>
+								<form action="/api/checkout_sessions" method="POST">
+									<HeroButton/>
+								</form>
 							</a>
 							</div>
 						</div>
