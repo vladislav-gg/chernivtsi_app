@@ -20,8 +20,8 @@ export default async function handler(req, res) {
           payment_intent_data: {
             setup_future_usage: 'off_session',
           },
-          success_url: 'http://localhost:3000/paymentSuccess',
-          cancel_url: 'http://localhost:3000/paymentSuccess',
+          success_url: 'https://chernivtsi-theatre.vercel.app/paymentSuccess',
+          cancel_url: 'https://chernivtsi-theatre.vercel.app/paymentSuccess',
         });
         res.redirect(303, session.url);
       } catch (err) {
