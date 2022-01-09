@@ -39,7 +39,7 @@ export default function Footer() {
 			<footer className='bg-[#fff] h-[40rem]'>
 				<div className="w-full flex flex-col md:items-center mt-56">
 					<form onSubmit={subscribe} className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col">
-						<label htmlFor='email-input' className="text-4xl flex justify-center">
+						<label htmlFor='email-input' className="sm:ml-10 md:ml-0 text-4xl flex justify-center">
 							{message}
 						</label>
 						<div className="mt-5 border-none mb-5 flex justify-center">
