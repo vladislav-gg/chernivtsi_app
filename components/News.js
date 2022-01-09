@@ -23,7 +23,7 @@ export default function News() {
                             </div>
                             <div className='left-col mt-5 left-col hover:shadow-lg transition duration-200 ease-in p-5'>
                                 <a href='/shows/nutckracker'>
-                                <img src='/images/spyashaya_krasavica.jpg'></img>
+                                <img src='/images/spyashaya_krasavica.webp'></img>
                                 <div className="flex flex-col pt-5"> 
                                     <p className="text-xl text-gray-500 mt-1">20 September 2021</p>
                                     <h3 className="text-2xl text-gray-900 mt-5">New ballet in our theatre</h3>
@@ -38,7 +38,7 @@ export default function News() {
                         </div>
                         <div className='right-col md:ml-10 h-full w-full mt-16 md:mt-0 hover:shadow-lg transition duration-200 ease-in p-5'>
                             <a href='/shows/nutckracker'>
-                                <img src='/images/my_pic.jpg'></img>
+                                <img src='/images/my_pic.webp'></img>
                                 <div className="flex flex-col pt-5"> 
                                     <p className="text-xl text-gray-500 mt-1">20 September 2021</p>
                                     <h3 className="text-2xl text-gray-900 mt-5">New ballet in our theatre</h3>
