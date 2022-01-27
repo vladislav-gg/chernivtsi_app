@@ -18,10 +18,9 @@ export default function Hero() {
 							className="object-cover h-full w-full"
 							src="/images/swan_lake.jpg"
 							alt="show"
-							width={1800}
-							height={750}
 							priority={true}
 							layout="fill"
+							objectFit='cover'
 
 						/>
 					</div>
@@ -77,10 +76,9 @@ export default function Hero() {
 							className="object-cover h-full w-full"
 							src="/images/giselle2.jpg"
 							alt="show"
-							width={1800}
-							height={850}
 							priority={true}
 							layout="fill"
+							objectFit='cover'
 							
 						/>
 					</div>
@@ -134,10 +132,9 @@ export default function Hero() {
 							className="object-cover h-full w-full"
 							src="/images/the_nutcracker7.jpg"
 							alt="show"
-							width={1800}
-							height={950}
 							priority={true}
 							layout="fill"
+							objectFit='cover'
 						/>
 					</div>
 					{/* <div className="w-[20rem] h-[22rem] ml-16 mt-12 md:w-[32rem] md:h-[20rem] bg-white absolute z-10 md:mt-40 md:ml-64 ">
