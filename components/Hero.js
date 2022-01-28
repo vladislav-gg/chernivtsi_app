@@ -9,7 +9,7 @@ import 'swiper/css';
 export default function Hero() {
 
     return (
-			<Swiper className="mySwiper" loop={true}>
+			<Swiper className="mySwiper">
 				<SwiperSlide className="relative w-full h-[55rem] ">
 					<div className="w-full h-full bg-white absolute z-0">
 						<div className='w-full h-[55rem] overflow-hidden relative '>
