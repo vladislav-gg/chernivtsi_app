@@ -14,7 +14,7 @@ export default function Hero() {
 					<div className="w-full h-full bg-white absolute z-0">
 						<div className='w-full h-[55rem] overflow-hidden relative '>
 							<Image
-							className="w-full h-full"
+							className=""
 							src="/images/giselle2.jpg"
 							alt="show"
 							priority={true}
@@ -48,15 +48,16 @@ export default function Hero() {
 				</SwiperSlide>
 				<SwiperSlide className="relative w-full h-[55rem]">
 					<div className="w-full h-full bg-white absolute z-0">
-						<Image
-							className=""
-							src="/images/swan_lake.jpg"
-							alt="show"
-							priority={true}
-							layout="fill"
-							objectFit='cover'
-
-						/>
+						<div className='w-full h-[55rem] overflow-hidden relative '>
+								<Image
+								className="w-full h-full"
+								src="/images/swan_lake.jpg"
+								alt="show"
+								priority={true}
+								objectFit='cover'
+								layout='fill'
+							/>
+							</div>
 					</div>
 					
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
@@ -85,14 +86,16 @@ export default function Hero() {
 				</SwiperSlide>
 				<SwiperSlide className="relative w-full h-[55rem]">
 					<div className="w-full h-full bg-white absolute z-0">
-						<Image
-							className=""
-							src="/images/the_nutcracker7.jpg"
-							alt="show"
-							priority={true}
-							layout="fill"
-							objectFit='cover'
-						/>
+						<div className='w-full h-[55rem] overflow-hidden relative'>
+								<Image
+								className="w-full h-full"
+								src="/images/the_nutcracker7.jpg"
+								alt="show"
+								priority={true}
+								objectFit='cover'
+								layout='fill'
+							/>
+							</div>
 					</div>
 					<div className='w-full h-[55rem] bg-gradient-to-t from-black to-transparent opacity-60'></div>
 						<div className='absolute left-10 md:left-44 bottom-40 text-white opacity-90'>
