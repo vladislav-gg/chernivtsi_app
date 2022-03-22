@@ -9,6 +9,9 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 export default function nutckracker() {
+	// LOADING STATE
+	const [loading, setLoading] = useState(false);
+
 	// ITEM STATE
 	const [item, setItem] = useState({
 		name: "Swan Lake",
@@ -31,9 +34,6 @@ export default function nutckracker() {
 	// PROMISE
 	const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
 	const stripePromise = loadStripe(publishableKey);
-
-	// LOADING STATE
-	const [loading, setLoading] = useState(false);
 
 	// POST TO STRIPE API
 	const createCheckOutSession = async () => {

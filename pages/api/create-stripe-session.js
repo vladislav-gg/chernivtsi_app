@@ -7,7 +7,6 @@ export default async function CreateStripeSession(req, res) {
 		price_data: {
 			currency: "gbp",
 			product_data: {
-				images: [item.image],
 				name: item.name,
 			},
 			unit_amount: item.price * 100,
