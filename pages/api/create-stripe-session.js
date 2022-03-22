@@ -1,6 +1,6 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-async function CreateStripeSession(req, res) {
+export default async function CreateStripeSession(req, res) {
 	const { item } = req.body;
 
 	const transformedItem = {
@@ -26,5 +26,3 @@ async function CreateStripeSession(req, res) {
 
 	res.json({ id: session.id });
 }
-
-export default CreateStripeSession;
