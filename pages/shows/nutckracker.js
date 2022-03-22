@@ -4,14 +4,54 @@ import Button from "../../components/Button";
 import PreviewPage from "../checkout";
 import Calendar from "../../components/Calendar";
 import React, { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function nutckracker() {
+	// ITEM STATE
 	const [item, setItem] = useState({
 		name: "Swan Lake",
 		description: "Tickets to Swan Lake",
 		quantity: 0,
 		price: 10,
 	});
+	// QUANTITY FUNCTIONS (incr, dec)
+	const changeQuantity = (value) => {
+		setItem({ ...item, quantity: Math.max(0, value) });
+	};
+
+	const onQuantityPlus = () => {
+		changeQuantity(item.quantity + 1);
+	};
+
+	const onQuantityMinus = () => {
+		changeQuantity(item.quantity - 1);
+	};
+	// PROMISE
+	const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+	const stripePromise = loadStripe(publishableKey);
+
+	// LOADING STATE
+	const [loading, setLoading] = useState(false);
+
+	// POST TO STRIPE API
+	const createCheckOutSession = async () => {
+		setLoading(true);
+
+		const stripe = await stripePromise;
+		const checkoutSession = await axios.post("/api/create-stripe-session", {
+			item: item,
+		});
+		const result = await stripe.redirectToCheckout({
+			sessionId: checkoutSession.data.id,
+		});
+		if (result.error) {
+			alert(result.error.message);
+		}
+		setLoading(false);
+	};
+
 	return (
 		<div className="w-full h-full">
 			<Navigation />
@@ -95,18 +135,34 @@ export default function nutckracker() {
 							<p className="text-xl mt-3 ">16:00 / 19:00</p>
 							<p className="text-xl mt-3 ">Price: {item.price}£</p>
 							<p className="text-xl mt-3 ">Quantity:</p>
-							<div className="flex">
-								<button className="text-gray-900 text-3xl">-</button>
-								<input
-									type="number"
-									className="p-2"
-									defaultValue={item.quantity}
-								/>
-								<button className="text-gray-900 text-3xl">+</button>
+							<div className="flex mt-3">
+								<button
+									className="text-gray-900 text-3xl"
+									onClick={onQuantityMinus}
+								>
+									-
+								</button>
+								<p className="p-1 text-2xl ml-5">{item.quantity}</p>
+								<button
+									className="text-gray-900 ml-5 text-3xl"
+									onClick={onQuantityPlus}
+								>
+									+
+								</button>
 							</div>
+							<p className="text-xl mt-3">
+								Total: {item.quantity * item.price}£
+							</p>
 						</div>
 						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
-							<Button />
+							<button
+								disabled={item.quantity === 0}
+								type="submit"
+								className="text-gray-900  px-10 py-2 border-2 border-gray-600  hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans disabled:cursor-not-allowed "
+								onClick={createCheckOutSession}
+							>
+								{loading ? "Processing..." : "Buy tickets"}
+							</button>
 						</div>
 					</div>
 				</div>
