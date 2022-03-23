@@ -134,7 +134,7 @@ export default function nutckracker() {
 							<p className="text-2xl">5 October - 31 December</p>
 							<p className="text-xl mt-3 ">16:00 / 19:00</p>
 							<p className="text-xl mt-3 ">Price: {item.price}£</p>
-							<p className="text-xl mt-3 ">Quantity:</p>
+							<p className="text-xl mt-12 ">Quantity:</p>
 							<div className="flex mt-3">
 								<button
 									className="text-gray-900 text-3xl"
