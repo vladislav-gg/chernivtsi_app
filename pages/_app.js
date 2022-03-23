@@ -13,10 +13,8 @@ export default function App({
 	pageProps: { session, ...pageProps },
 }) {
 	return (
-		<RecoilRoot>
-			<SessionProvider session={session} refetchInterval={5 * 60}>
-				<Component {...pageProps} />
-			</SessionProvider>
-		</RecoilRoot>
+		<SessionProvider session={session} refetchInterval={0}>
+			<Component {...pageProps} />
+		</SessionProvider>
 	);
 }
