@@ -65,12 +65,12 @@ export default function nutckracker() {
 						/>
 					</div>
 				</div>
-				<div className="flex max-w-7xl justify-between mt-16 mx-auto">
+				<div className="flex flex-col md:flex-row p-4 md:p-0 max-w-7xl md:justify-between  mt-16 mx-auto">
 					<div className="left-container">
 						<h2 className="text-gray-900 text-6xl font-medium font-serif">
 							Swan Lake
 						</h2>
-						<p className="font-sans text-xl text-gray-900 mt-12 max-w-3xl">
+						<p className="font-sans text-xl text-gray-900 mt-12 md:max-w-3xl">
 							Tchaikovsky’s magical ballet tells the story of the doomed love of
 							Prince Siegfried and Princess Odette. Prince Siegfried goes out
 							hunting one night and chases a group of swans – one of them
@@ -129,7 +129,7 @@ export default function nutckracker() {
 						</div>
 					</div>
 					<div></div>
-					<div className="flex flex-col items-start ">
+					<div className="flex flex-col items-start mt-20 md:mt-0">
 						<div className="font-sans text-gray-900 mb-5 max-w-lg flex flex-col">
 							<p className="text-2xl">5 October - 31 December</p>
 							<p className="text-xl mt-3 ">16:00 / 19:00</p>
@@ -154,7 +154,7 @@ export default function nutckracker() {
 								Total: {item.quantity * item.price}£
 							</p>
 						</div>
-						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
+						<div className="flex md:items-center md:ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
 							<button
 								disabled={item.quantity === 0}
 								type="submit"
