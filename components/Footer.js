@@ -37,33 +37,32 @@ export default function Footer() {
 	return (
 		<div>
 			<footer className="bg-[#fff] h-[40rem]">
-				<div className="w-full flex flex-col md:items-center mt-56">
+				<div className="w-full flex flex-col md:items-center mt-56 justify-between">
 					<form
 						onSubmit={subscribe}
-						className="my-form  font-sans text-black font-semibold w-full max-w-md mx-auto flex flex-col"
+						className="my-form font-sans text-black font-semibold w-full mx-auto flex flex-col justify-center "
 					>
-						<label
-							htmlFor="email-input"
-							className="sm:ml-10 md:ml-0 text-4xl flex justify-center"
-						>
-							{message}
-						</label>
-						<div className="mt-5 border-none mb-5 flex justify-center">
-							<input
-								className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-80 border-b  border-gray-500 ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
-								placeholder="Email"
-								type="email"
-								required
-								ref={inputEl}
-							></input>
-						</div>
-						<div className="flex md:items-center ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
-							<button
-								type="submit"
-								className="text-black font-normal text-lg px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
-							>
-								Sign up
-							</button>
+						<div className="w-full flex flex-col justify-center">
+							<h2 className="text-2xl md:text-4xl flex justify-center">
+								{message}
+							</h2>
+							<div className="mt-5 border-none mb-5 flex justify-center">
+								<input
+									className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-80 border-b  border-gray-500 md:ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
+									placeholder="Email"
+									type="email"
+									required
+									ref={inputEl}
+								></input>
+							</div>
+							<div className="flex md:items-center  mt-5  md:mt-0 justify-center">
+								<button
+									type="submit"
+									className="text-black font-normal text-lg px-10 py-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-700"
+								>
+									Sign up
+								</button>
+							</div>
 						</div>
 					</form>
 					<div className="flex flex-col  md:flex-row  md:max-w-6xl md:mx-auto md:space-x-16 mt-40 ml-10">
