@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export default function Navigation() {
 	const { data: session } = useSession();
-	const { accessToken } = data;
 
 	const [active, setActive] = useState(false);
 
