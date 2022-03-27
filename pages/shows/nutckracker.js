@@ -154,7 +154,7 @@ export default function nutckracker() {
 								Total: {item.quantity * item.price}£
 							</p>
 						</div>
-						<div className="flex md:items-center md:ml-10 mt-5 md:ml-0 md:mt-0 justify-center">
+						<div className="flex md:items-center  mt-5  md:mt-0 justify-center">
 							<button
 								disabled={item.quantity === 0}
 								type="submit"
