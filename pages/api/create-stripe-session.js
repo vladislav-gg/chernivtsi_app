@@ -20,7 +20,7 @@ export default async function CreateStripeSession(req, res) {
 		line_items: [transformedItem],
 		mode: "payment",
 		success_url: "https://chernivtsi-theatre.vercel.app/paymentSuccess",
-		cancel_url: "https://chernivtsi-theatre.vercel.app/paymentSuccess",
+		cancel_url: "https://chernivtsi-theatre.vercel.app/paymentCancel",
 	});
 
 	res.json({ id: session.id });
