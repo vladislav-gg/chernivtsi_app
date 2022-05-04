@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
-export default function paymentSuccess() {
+export default function paymentcancel() {
 	return (
 		<div className="w-full h-full">
 			<Navigation />
