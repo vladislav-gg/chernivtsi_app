@@ -47,12 +47,14 @@ export default function Footer() {
 								{message}
 							</h2>
 							<div className="mt-5 border-none mb-5 flex justify-center">
+								<label>email</label>
 								<input
 									className="text-black placeholder-gray-900 font-semibold py-3 px-2 w-80 border-b  border-gray-500 md:ml-3 focus:outline-none bg-transparent placeholder-opacity-50"
 									placeholder="Email"
 									type="email"
 									required
 									ref={inputEl}
+									title="email"
 								></input>
 							</div>
 							<div className="flex md:items-center  mt-5  md:mt-0 justify-center">
