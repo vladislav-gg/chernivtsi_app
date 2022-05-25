@@ -13,7 +13,7 @@ export default function Hero() {
 					<div className="w-full h-[55rem] overflow-hidden relative ">
 						<Image
 							className=""
-							src="/images/giselle2.jpg"
+							src="/images/giselle2.webp"
 							alt="show"
 							priority={true}
 							objectFit="cover"
@@ -49,7 +49,7 @@ export default function Hero() {
 					<div className="w-full h-[55rem] overflow-hidden relative ">
 						<Image
 							className="w-full h-full"
-							src="/images/swan_lake.jpg"
+							src="/images/swan_lake.webp"
 							alt="show"
 							priority={true}
 							objectFit="cover"
