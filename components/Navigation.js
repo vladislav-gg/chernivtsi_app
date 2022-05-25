@@ -3,7 +3,7 @@ import { useSession, signIn, signOut, getSession } from "next-auth/react";
 import { useState } from "react";
 
 export default function Navigation() {
-	const { data: session } = useSession();
+	const { session } = useSession();
 
 	const [active, setActive] = useState(false);
 
@@ -106,3 +106,4 @@ export default function Navigation() {
 		</div>
 	);
 }
+Navigation.auth = true;
