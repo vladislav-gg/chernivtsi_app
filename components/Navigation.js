@@ -3,8 +3,8 @@ import { useSession, signIn, signOut, getSession } from "next-auth/react";
 import { useState } from "react";
 
 export default function Navigation() {
-	const { data: session } = useSession();
-
+	const { data: session, status } = useSession();
+	const loading = status === "loading";
 	const [active, setActive] = useState(false);
 
 	// Burger menu toggle
@@ -64,6 +64,10 @@ export default function Navigation() {
 					>
 						News
 					</a>
+					{loading && (
+						<div className="text-gray-900 font-normal text-lg">Loading...</div>
+					)}
+
 					{session && (
 						<div className="text-gray-900 font-normal text-lg">
 							Signed in as {session.user.name} <br />
