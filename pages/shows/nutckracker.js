@@ -7,6 +7,8 @@ import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "../../src/features/counter/counterSlice";
 
 export default function nutckracker() {
 	// LOADING STATE
