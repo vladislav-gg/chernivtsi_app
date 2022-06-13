@@ -1,22 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	value: 0,
+	name: "Swan Lake",
+	description: "Tickets to Swan Lake",
+	quantity: 0,
+	price: 10,
 };
 
 export const counterSlice = createSlice({
 	name: "counter",
 	initialState,
 	reducers: {
-		increment: (state) => {
+		increment: (item) => {
 			// Redux Toolkit allows us to write "mutating" logic in reducers. It
 			// doesn't actually mutate the state because it uses the Immer library,
 			// which detects changes to a "draft state" and produces a brand new
 			// immutable state based off those changes
-			state.value += 1;
+			item.quantity += 1;
 		},
-		decrement: (state) => {
-			state.value -= 1;
+		decrement: (item) => {
+			state.quantity -= 1;
 		},
 		incrementByAmount: (state, action) => {
 			state.value += action.payload;
