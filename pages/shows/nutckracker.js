@@ -9,8 +9,13 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../../src/features/counter/counterSlice";
+import { selectCount } from "../../src/features/counter/counterSlice";
 
 export default function nutckracker() {
+	// REDUX HOKS
+	const count = useSelector(selectCount);
+	const dispatch = useDispatch();
+
 	// LOADING STATE
 	const [loading, setLoading] = useState(false);
 
@@ -43,7 +48,7 @@ export default function nutckracker() {
 
 		const stripe = await stripePromise;
 		const checkoutSession = await axios.post("/api/create-stripe-session", {
-			item: item,
+			item: count,
 		});
 		const result = await stripe.redirectToCheckout({
 			sessionId: checkoutSession.data.id,
@@ -135,30 +140,30 @@ export default function nutckracker() {
 						<div className="font-sans text-gray-900 mb-5 max-w-lg flex flex-col">
 							<p className="text-2xl">5 October - 31 December</p>
 							<p className="text-xl mt-3 ">16:00 / 19:00</p>
-							<p className="text-xl mt-3 ">Price: {item.price}£</p>
+							<p className="text-xl mt-3 ">Price: {count.price}£</p>
 							<p className="text-xl mt-12 ">Quantity:</p>
 							<div className="flex mt-3">
 								<button
 									className="text-gray-900 text-3xl"
-									onClick={onQuantityMinus}
+									onClick={() => dispatch(decrement())}
 								>
 									-
 								</button>
-								<p className="p-1 text-2xl ml-5">{item.quantity}</p>
+								<p className="p-1 text-2xl ml-5">{count.quantity}</p>
 								<button
 									className="text-gray-900 ml-5 text-3xl"
-									onClick={onQuantityPlus}
+									onClick={() => dispatch(increment())}
 								>
 									+
 								</button>
 							</div>
 							<p className="text-xl mt-3">
-								Total: {item.quantity * item.price}£
+								Total: {count.quantity * count.price}£
 							</p>
 						</div>
 						<div className="flex md:items-center  mt-5  md:mt-0 justify-center">
 							<button
-								disabled={item.quantity === 0}
+								disabled={count.quantity === 0}
 								type="submit"
 								className="text-gray-900  px-10 py-2 border-2 border-gray-600  hover:bg-gray-900 hover:text-gray-100 duration-700 text-lg font-sans disabled:cursor-not-allowed "
 								onClick={createCheckOutSession}
