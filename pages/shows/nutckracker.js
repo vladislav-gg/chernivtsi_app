@@ -20,24 +20,7 @@ export default function nutckracker() {
 	const [loading, setLoading] = useState(false);
 
 	// ITEM STATE
-	const [item, setItem] = useState({
-		name: "Swan Lake",
-		description: "Tickets to Swan Lake",
-		quantity: 0,
-		price: 10,
-	});
-	// QUANTITY FUNCTIONS (incr, dec)
-	const changeQuantity = (value) => {
-		setItem({ ...item, quantity: Math.max(0, value) });
-	};
 
-	const onQuantityPlus = () => {
-		changeQuantity(item.quantity + 1);
-	};
-
-	const onQuantityMinus = () => {
-		changeQuantity(item.quantity - 1);
-	};
 	// PROMISE
 	const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
 	const stripePromise = loadStripe(publishableKey);
@@ -145,7 +128,13 @@ export default function nutckracker() {
 							<div className="flex mt-3">
 								<button
 									className="text-gray-900 text-3xl"
-									onClick={() => dispatch(decrement())}
+									onClick={() => {
+										if (count.quantity <= 0) {
+											return false;
+										} else {
+											dispatch(decrement());
+										}
+									}}
 								>
 									-
 								</button>
