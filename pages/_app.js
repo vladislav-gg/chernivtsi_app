@@ -1,8 +1,9 @@
 import "tailwindcss/tailwind.css";
 import { SessionProvider } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { store } from "../src/app/store";
+import { persistor, store } from "../src/app/store";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 export default function App({
 	Component,
@@ -10,15 +11,17 @@ export default function App({
 }) {
 	return (
 		<Provider store={store}>
-			<SessionProvider session={session}>
-				{Component.auth ? (
-					<Auth>
+			<PersistGate loading={null} persistor={persistor}>
+				<SessionProvider session={session}>
+					{Component.auth ? (
+						<Auth>
+							<Component {...pageProps} />
+						</Auth>
+					) : (
 						<Component {...pageProps} />
-					</Auth>
-				) : (
-					<Component {...pageProps} />
-				)}
-			</SessionProvider>
+					)}
+				</SessionProvider>
+			</PersistGate>
 		</Provider>
 	);
 }
