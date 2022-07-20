@@ -5,6 +5,7 @@ const initialState = {
 	description: "Tickets to Swan Lake",
 	quantity: 0,
 	price: 10,
+	image: "/images/swan_lake.webp",
 };
 
 export const counterSlice = createSlice({
