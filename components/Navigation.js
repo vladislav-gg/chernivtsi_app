@@ -1,20 +1,13 @@
 import React from "react";
 import { useSession, signIn, signOut, getSession } from "next-auth/react";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCount } from "../src/features/counter/counterSlice";
+import Button from "./Button";
 
+import Cart from "./Cart";
 export default function Navigation() {
 	const { data: session, status } = useSession();
 	const loading = status === "loading";
 	const [active, setActive] = useState(false);
-	const item = useSelector(selectCount);
-	const [cartToggle, setCartToggle] = useState(false);
-
-	//Cart popup
-	const handlePopUp = () => {
-		setCartToggle(!cartToggle);
-	};
 
 	// Burger menu toggle
 	const handleClick = () => {
@@ -57,7 +50,7 @@ export default function Navigation() {
 				<div className="hidden md:flex flex-col md:flex-row items-start md:items-center space-x-9">
 					<a
 						href="/events"
-						className="text-gray-900 border-gray-700 border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
+						className="text-gray-900 border-b border-transparent hover:border-b hover:border-gray-700 font-normal text-lg"
 					>
 						Tickets and Events
 					</a>
@@ -96,44 +89,7 @@ export default function Navigation() {
 							Sign Out
 						</button>
 					)}
-					<button
-						class="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out outline focus:outline-black "
-						aria-label="Cart"
-						onClick={handlePopUp}
-					>
-						<svg
-							class="h-6 w-6"
-							fill="none"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-						</svg>
-						<span class="absolute inset-0 object-right-top -mr-6">
-							<div class="inline-flex items-center px-1.5 py-0.5 border-2 border-white rounded-full text-xs font-semibold leading-4 bg-gray-500 text-white">
-								{item.quantity}
-							</div>
-						</span>
-						<div
-							className={`bg-white w-72 h-64 z-50 absolute shadow-lg ${
-								cartToggle ? "block" : "hidden"
-							}`}
-						>
-							<div className="mt-10 ">
-								<div className="image-wrapper w-16 ml-5">
-									<img src="/images/swan_lake.webp"></img>
-								</div>
-								<div className="text-left ml-5 mt-5">
-									<p>Show name: {item.name}</p>
-									<p>Quantity: {item.quantity}</p>
-									<p>Total: £{item.price * item.quantity}</p>
-								</div>
-							</div>
-						</div>
-					</button>
+					<Cart />
 				</div>
 				{/* MOBILE NAVIGATION */}
 				<div
