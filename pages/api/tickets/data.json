@@ -1,0 +1,16 @@
+[
+	{
+		"id": 1,
+		"product": "Swan Lake",
+		"category": "ballet",
+		"image": "https://i.imgur.com/E6d9Uq6.png",
+		"price": 10
+	},
+	{
+		"id": 2,
+		"product": "The Nutckracker",
+		"category": "xbox",
+		"image": "https://imgur.com/a/x5jNRNn",
+		"price": 20
+	}
+]
