@@ -6,7 +6,6 @@ import Button from "./Button";
 import Cart from "./Cart";
 export default function Navigation() {
 	const { data: session, status } = useSession();
-	const loading = status === "loading";
 	const [active, setActive] = useState(false);
 
 	// Burger menu toggle
