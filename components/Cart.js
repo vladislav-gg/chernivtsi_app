@@ -45,12 +45,12 @@ export default function Cart() {
 				</span>
 			</button>
 			<div
-				className={`bg-white outline w-72 pb-5 z-50 absolute shadow-lg ${
+				className={`bg-white outline w-72 pb-5 z-50 absolute shadow-2xl ${
 					cartToggle ? "block" : "hidden"
 				}`}
 			>
 				{item.quantity === 0 ? (
-					<h1 className="ml-14 pt-3">Your cart is empty</h1>
+					<h1 className="ml-14 py-40">Your cart is empty</h1>
 				) : (
 					<div className="mt-10 px-6">
 						<div className="image-wrapper w-52 ">
