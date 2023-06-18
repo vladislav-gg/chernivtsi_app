@@ -13,7 +13,7 @@ export default function PreviewPage() {
 
 		if (query.get("canceled")) {
 			console.log(
-				"Order canceled -- continue to shop around and checkout when youU+2019re ready."
+				"Order canceled -- continue to shop around and checkout when you are ready."
 			);
 		}
 	}, []);

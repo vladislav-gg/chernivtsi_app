@@ -7,7 +7,8 @@ import {
 	selectCount,
 } from "../src/features/counter/counterSlice";
 import Button from "./Button";
-
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
 export default function Cart() {
 	const [cartToggle, setCartToggle] = useState(false);
 	const item = useSelector(selectCount);
@@ -19,6 +20,33 @@ export default function Cart() {
 	const handlePopUp = () => {
 		setCartToggle(!cartToggle);
 	};
+	
+		// LOADING STATE
+		const [loading, setLoading] = useState(false);
+	
+		// ITEM STATE
+	
+		// PROMISE
+		const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+		const stripePromise = loadStripe(publishableKey);
+	
+		// POST TO STRIPE API
+		const createCheckOutSession = async () => {
+			setLoading(true);
+	
+			const stripe = await stripePromise;
+			const checkoutSession = await axios.post("/api/create-stripe-session", {
+				item: count,
+			});
+			const result = await stripe.redirectToCheckout({
+				sessionId: checkoutSession.data.id,
+			});
+			if (result.error) {
+				alert(result.error.message);
+			}
+			setLoading(false);
+		};
+	
 
 	return (
 		<div>
@@ -78,7 +106,7 @@ export default function Cart() {
 							</p>
 							<p className="">Total: £{item.price * item.quantity}</p>
 						</div>
-						<Button />
+						<Button onClick={createCheckOutSession}/>
 					</div>
 				)}
 			</div>
